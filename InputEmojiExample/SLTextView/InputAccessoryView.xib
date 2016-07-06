@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="InputAccessoryView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3QP-bw-NnR">
+                    <rect key="frame" x="8" y="10" width="28" height="28"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="28" id="7cl-dE-f6p"/>
+                        <constraint firstAttribute="width" constant="28" id="LXk-4P-Rd6"/>
+                    </constraints>
+                    <state key="normal" image="mms_face_01.png"/>
+                    <connections>
+                        <action selector="showEmojeAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="DJE-kz-3W5"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入内容" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HYd-cp-bk5">
+                    <rect key="frame" x="47" y="14" width="213" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="Dv3-IH-VUN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HR6-a9-ULQ" customClass="SLTextView">
+                    <rect key="frame" x="42" y="5" width="220" height="37"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <gestureRecognizers/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8kG-eF-2Yg">
+                    <rect key="frame" x="268" y="6" width="44" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="E1H-fL-Mb0"/>
+                        <constraint firstAttribute="width" constant="44" id="Vd2-Kl-Z5S"/>
+                    </constraints>
+                    <state key="normal" title="发送">
+                        <color key="titleColor" red="0.91764705879999997" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="sendButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="2Bi-jr-Ylk"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="HR6-a9-ULQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="2ED-os-uvk"/>
+                <constraint firstItem="HR6-a9-ULQ" firstAttribute="leading" secondItem="3QP-bw-NnR" secondAttribute="trailing" constant="6" id="6OA-0q-K9m"/>
+                <constraint firstAttribute="bottom" secondItem="3QP-bw-NnR" secondAttribute="bottom" constant="9" id="6Ou-5G-rF8"/>
+                <constraint firstItem="HYd-cp-bk5" firstAttribute="trailing" secondItem="HR6-a9-ULQ" secondAttribute="trailing" constant="-2" id="Bs3-ir-Rp0"/>
+                <constraint firstItem="HYd-cp-bk5" firstAttribute="leading" secondItem="HR6-a9-ULQ" secondAttribute="leading" constant="5" id="Fa6-b6-xhf"/>
+                <constraint firstAttribute="bottom" secondItem="8kG-eF-2Yg" secondAttribute="bottom" constant="5" id="HSh-S8-ssg"/>
+                <constraint firstAttribute="bottom" secondItem="HR6-a9-ULQ" secondAttribute="bottom" constant="5" id="P5u-8i-MAE"/>
+                <constraint firstItem="3QP-bw-NnR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="TvK-if-xWM"/>
+                <constraint firstItem="8kG-eF-2Yg" firstAttribute="leading" secondItem="HR6-a9-ULQ" secondAttribute="trailing" constant="6" id="eTH-KS-Rck"/>
+                <constraint firstAttribute="trailing" secondItem="8kG-eF-2Yg" secondAttribute="trailing" constant="8" id="ey7-zl-lgM"/>
+                <constraint firstItem="HYd-cp-bk5" firstAttribute="bottom" secondItem="HR6-a9-ULQ" secondAttribute="bottom" constant="-7" id="uZf-35-jLB"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="leftConstraint" destination="TvK-if-xWM" id="yex-LG-EDb"/>
+                <outlet property="placeholderLabel" destination="HYd-cp-bk5" id="QU6-Od-CiC"/>
+                <outlet property="sendMessge" destination="8kG-eF-2Yg" id="b8B-LM-jdc"/>
+                <outlet property="showEmoje" destination="3QP-bw-NnR" id="EXB-wE-dbL"/>
+                <outlet property="textView" destination="HR6-a9-ULQ" id="pJj-uZ-v1x"/>
+                <outletCollection property="gestureRecognizers" destination="7IB-DH-VKT" appends="YES" id="kJA-z9-c3w"/>
+            </connections>
+            <point key="canvasLocation" x="386" y="273"/>
+        </view>
+        <tapGestureRecognizer id="7IB-DH-VKT">
+            <connections>
+                <action selector="becomingTextView:" destination="iN0-l3-epB" id="f5e-YK-b30"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="mms_face_01.png" width="28" height="28"/>
+    </resources>
+</document>
